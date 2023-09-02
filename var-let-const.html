@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Hub</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto">
+      <!-- navbar -->
+      <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a onclick="homeBtn()" href="#" class="flex items-center">
+            <img src="assets/Logo.png" class="h-8 mr-3" alt="Flowbite Logo" />
+          </a>
+          <div class="flex md:order-2">
+            <button
+              onclick="blogBtn()"
+              type="button"
+              class="text-white bg-[#FF1F3D] hover:bg-[#FF1F3D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FF1F3D] dark:hover:bg-[#FF1F3D] dark:focus:bg-[#FF1F3D]"
+            >
+              Blog
+            </button>
+          </div>
+          <div
+            class="items-center justify-between w-full md:flex md:w-auto md:order-1"
+            id="navbar-cta"
+          >
+            <ul
+              class="flex flex-col text-[#252525] font-medium mt-3 md:mt-0 px-4 py-2 border rounded-lg bg-[rgba(37,37,37,0.20)] hover:bg-[#FF1F3D] hover:text-white"
+            >
+              <li onclick="homeBtn()">
+                <a href="#" class="block rounded">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr class="border-b-[2px]" />
+
+    <!-- Main Section -->
+    <main class="max-w-7xl mx-auto mt-10 mb-10">
+      <section class="mb-10 px-3 lg:px-0">
+        <div>
+          <header class="mb-4 lg:mb-6 not-format">
+            <address class="flex items-center mb-6 not-italic">
+              <div
+                class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"
+              >
+                <img
+                  class="mr-4 w-16 h-16 border-2 border-[#ddd] rounded-full"
+                  src="assets/user.webp"
+                  alt="Golam Maula"
+                />
+                <div>
+                  <a
+                    href="#"
+                    rel="author"
+                    class="text-xl font-bold text-gray-900 dark:text-white"
+                    >Golam Muala</a
+                  >
+                  <p
+                    class="text-base font-light text-gray-500 dark:text-gray-400"
+                  >
+                    Novice Web Developer
+                  </p>
+                  <p
+                    class="text-base font-light text-gray-500 dark:text-gray-400"
+                  >
+                    <time datetime="2022-02-08" title="February 8th, 2022"
+                      >Aug. 1, 2023</time
+                    >
+                  </p>
+                </div>
+              </div>
+            </address>
+            <h1
+              class="mb-4 text-2xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white"
+            >
+              The scope of <code class="bg-yellow-200">var</code>,
+              <code class="bg-yellow-200">let</code>, and
+              <code class="bg-yellow-200">const</code>
+            </h1>
+          </header>
+          <section align="justify">
+            <p class="text-base lg:text-lg mb-6">
+              In JavaScript, <code class="bg-yellow-200">var</code>,<code
+                class="bg-yellow-200"
+                >let</code
+              >
+              and <code class="bg-yellow-200">const</code> keywords are used to
+              declare variable. If <code class="bg-yellow-200">var</code>,<code
+                class="bg-yellow-200"
+                >let</code
+              >
+              and <code class="bg-yellow-200">const</code>, three keywords are
+              used for variable declaration, then what's the difference among
+              them? We know, they have different types of scope and behaviors.
+              Let's discuss about the differences among them.
+            </p>
+            <!-- var scoping -->
+            <p class="text-base lg:text-lg">
+              <span class="font-bold"
+                >1.<code class="bg-yellow-200">var</code>:</span
+              >
+              If we declare variables with
+              <code class="bg-yellow-200 font-bold">var</code> keyword, then we
+              have face some issues. Let's try to understand
+              <code class="bg-yellow-200 font-bold">var</code>.
+            </p>
+            <p class="text-base lg:text-lg mb-4">
+              <span class="font-bold">Scope</span> means where the variable are
+              available for used. For
+              <code class="bg-yellow-200 font-bold">var</code>, it's declared as
+              global scope, functional scope and block scope. When a variable
+              declare with var keyword outside of a function, it is available
+              for the entire scope. Again, if we declare a variable with var
+              keyword inside a function, then variable only available inside the
+              function.When we declare a variable with
+              <code class="bg-yellow-200 font-bold">var</code> keyword, We can
+              re-declare and reassign value.
+              <br />
+              Let's see an example:
+              <script
+                src="https://ideone.com/e.js/8GoUL1"
+                type="text/javascript"
+              ></script>
+            </p>
+            <p class="text-base lg:text-lg mt-4">
+              Here, we can easily access 'greeting' variable outside and inside
+              the function. But we can't access 'message' variable outside of
+              the function, it shows an error. So,<code
+                class="bg-yellow-200 font-bold"
+                >var</code
+              >
+              shows it's scoping behavior. And, we can see value of
+              variable<code>x</code>
+              is also reassign and re-declare inside another block, where
+              <code>x</code> shows it's global scoping behavior.
+            </p>
+            <!-- let scoping -->
+            <p class="text-base lg:text-lg mt-6">
+              <span class="font-bold"
+                >2.<code class="bg-yellow-200">let</code>:</span
+              >
+              Now <code class="bg-yellow-200 font-bold">let</code> is more
+              preferred in variable declaration, we can reassign value inside
+              it. Let's try to understand
+              <code class="bg-yellow-200 font-bold">let</code>.
+            </p>
+            <p class="text-base lg:text-lgmb-6">
+              <code class="bg-yellow-200 font-bold">let</code> is block scope,
+              that means it's working inside curly braces { }. So, if we declare
+              a variable with
+              <code class="bg-yellow-200 font-bold">let</code> keyword, it is
+              available inside the block. That why it is known as block scope.
+              And we can't not redeclare a variable with
+              <code class="bg-yellow-200 font-bold">let</code>;
+              <br />
+              Let's see an example:
+              <script
+                src="https://ideone.com/e.js/YyvfoB"
+                type="text/javascript"
+              ></script>
+            </p>
+            <p class="text-base lg:text-lg my-8">
+              Here, we can see <code>message</code> outside of the block(outside
+              of { }), that why it returns an error. Again, <code>x</code> value
+              is 20 inside the if block, but when we console.log() the
+              <code>x</code>, it shows 10. Because initially we assign value 10
+              inside <code>x</code> variable, for the scoping issue,
+              <code>x</code> value still remain 10.
+            </p>
+            <!-- const scoping -->
+            <p class="text-base lg:text-lg mt-6">
+              <span class="font-bold"
+                >3.<code class="bg-yellow-200 mb-6">const</code>:</span
+              >
+              <code class="bg-yellow-200 font-bold">const</code> is only used
+              for constant values. It's declaration and scoping are similar
+              to<code class="bg-yellow-200 font-bold">let</code>. But you can't
+              reassign value when you declare variable with
+              <code class="bg-yellow-200 font-bold">const</code> keyword. Let's
+              try to understand
+              <code class="bg-yellow-200 font-bold">const</code> with an
+              example:
+              <script
+                src="https://ideone.com/e.js/Fcu6Zq"
+                type="text/javascript"
+              ></script>
+            </p>
+            <p class="text-base lg:text-lg mt-6">
+              Here, outside of if block we can see value of <code>z</code> still
+              10, cause outer z is in different block. But inside of if block z
+              is 20, it's a new constant type variable in a different block. So,
+              <code class="bg-yellow-200 font-bold">const</code> is also showing
+              it's block scoping behavior.
+              <br />
+              Again, we can see <code>piValue</code> is not mutable, because
+              piValue declare with
+              <code class="bg-yellow-200 font-bold">const</code> keyword.
+            </p>
+          </section>
+        </div>
+      </section>
+      <section class="px-3">
+        <h2
+          class="mb-8 text-lg lg:text-2xl font-bold text-gray-900 dark:text-white"
+        >
+          Related Articles
+        </h2>
+        <div
+          class="flex gap-6 flex-col md:flex-row items-center lg:items-stretch"
+        >
+          <article class="max-w-xs p-4 rounded-md shadow-lg bg-gray-50">
+            <a href="null-undefined.html">
+              <img
+                src="assets/null-and-undefined.webp"
+                class="mb-5 rounded-lg object-center w-full max-h-[135px]"
+                alt="null-undefined"
+              />
+            </a>
+            <h2
+              class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white"
+            >
+              <a href="null-undefined.html"
+                >The use cases of <code>null</code> and
+                <code>undefined</code></a
+              >
+            </h2>
+            <p class="mb-4 font-light text-gray-500 dark:text-gray-400">
+              Undefined means the variable has been declared, but its value has
+              not been initialize. Null means an empty value or a blank value.
+            </p>
+            <a
+              href="null-undefined.html"
+              class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+            >
+              Read in 8 minutes
+            </a>
+          </article>
+          <article class="max-w-xs p-4 rounded-md shadow-lg bg-gray-50">
+            <a href="rest-api.html">
+              <img
+                src="assets/rest-api.png"
+                class="mb-5 rounded-lg w-full max-h-[135px]"
+                alt="rest-api"
+              />
+            </a>
+            <h2
+              class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white"
+            >
+              <a href="rest-api.html">What is REST API?</a>
+            </h2>
+            <p class="mb-4 font-light text-gray-500 dark:text-gray-400">
+              <code class="bg-yellow-200 font-bold">REST API</code> stands for
+              REpresentational State Transfer Application Programming Interface.
+              A REST API also known as RESTful API.
+            </p>
+            <a
+              href="rest-api.html"
+              class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+            >
+              Read in 6 minutes
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>

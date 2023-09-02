@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Hub</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto">
+      <!-- navbar -->
+      <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a onclick="homeBtn()" href="#" class="flex items-center">
+            <img src="assets/Logo.png" class="h-8 mr-3" alt="Flowbite Logo" />
+          </a>
+          <div class="flex md:order-2">
+            <button
+              onclick="blogBtn()"
+              type="button"
+              class="text-white bg-[#FF1F3D] hover:bg-[#FF1F3D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FF1F3D] dark:hover:bg-[#FF1F3D] dark:focus:bg-[#FF1F3D]"
+            >
+              Blog
+            </button>
+          </div>
+          <div
+            class="items-center justify-between w-full md:flex md:w-auto md:order-1"
+            id="navbar-cta"
+          >
+            <ul
+              class="flex flex-col text-[#252525] font-medium mt-3 md:mt-0 px-4 py-2 border rounded-lg bg-[rgba(37,37,37,0.20)] hover:bg-[#FF1F3D] hover:text-white"
+            >
+              <li onclick="homeBtn()">
+                <a href="#" class="block rounded">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr class="border-b-[2px]" />
+
+    <!-- Main Section -->
+    <main class="max-w-7xl mx-auto mt-10 mb-10 px-3 lg:px-0">
+      <section class="">
+        <div>
+          <header class="mb-4 lg:mb-6 not-format">
+            <address class="flex items-center mb-6 not-italic">
+              <div
+                class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"
+              >
+                <img
+                  class="mr-4 w-16 h-16 border-2 border-[#ddd] rounded-full"
+                  src="assets/user.webp"
+                  alt="Golam Maula"
+                />
+                <div>
+                  <a
+                    href="#"
+                    rel="author"
+                    class="text-xl font-bold text-gray-900 dark:text-white"
+                    >Golam Muala</a
+                  >
+                  <p
+                    class="text-base font-light text-gray-500 dark:text-gray-400"
+                  >
+                    Novice Web Developer
+                  </p>
+                  <p
+                    class="text-base font-light text-gray-500 dark:text-gray-400"
+                  >
+                    <time
+                      pubdate
+                      datetime="2022-02-08"
+                      title="February 8th, 2022"
+                      >Aug. 1, 2023</time
+                    >
+                  </p>
+                </div>
+              </div>
+            </address>
+            <h1
+              class="mb-4 text-2xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white"
+            >
+              What is REST API?
+            </h1>
+          </header>
+          <section align="justify">
+            <p class="text-base lg:text-lg my-6">
+              <code class="bg-yellow-200 font-bold">REST API</code> stands for
+              REpresentational State Transfer Application Programming Interface.
+              A REST API also known as RESTful API. RESTful API is an interface
+              use that two computer systems to exchange information between them
+              securely over the internet. Lets talk about API and REST.
+              <br />
+              When we talk about REST API, a common question initially raised
+              which is 'What is API'?
+              <br />
+            </p>
+            <p class="text-base lg:text-lg my-6">
+              <span class="text-lg lg:text-xl font-bold">What is API?</span>
+              <br />
+              An Application Programming Interface (API) establishes the
+              guidelines and protocols for interacting with other software
+              systems. Developers design and offer APIs to enable seamless
+              programmatic communication between different applications. In API
+              there are two portions, one is clients and another one is
+              resources.
+              <br />
+              Lets talk about clients and resources.
+              <br />
+              <br />
+              <span class="font-bold">Clients</span>
+              <br />
+              Clients refer to individuals or software systems seeking access to
+              data or services on the internet. The client can be a person or a
+              software system that uses the API.
+              <br />
+              <span class="font-bold">Resources</span>
+              <br />
+              Resources are the information that applications are provide to
+              their clients. Resources can be images, videos, text, numbers, or
+              any type of data.
+              <br />
+            </p>
+            <p class="text-base lg:text-lg my-6">
+              <span class="text-lg lg:text-xl font-bold">What is REST?</span>
+              <br />
+              Representational State Transfer (REST) is a software architecture
+              that defines a set of principles governing the functionality of an
+              API. Originally conceived as a framework for managing
+              communication over intricate networks like the internet, REST
+              provides guidelines for designing efficient and scalable web APIs.
+
+              <br />
+              <br />
+              RESTful APIs are frequently constructed by developers using the
+              Hypertext Transfer Protocol (HTTP). Within this context, HTTP
+              methods instruct the server on how to interact with a resource.
+              There are four prevalent HTTP methods:
+              <code class="bg-yellow-200 font-bold">GET</code>,
+              <code class="bg-yellow-200 font-bold">PUT</code>,
+              <code class="bg-yellow-200 font-bold">POST</code>,and
+              <code class="bg-yellow-200 font-bold">DELETE</code>.
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <!-- Related Articles -->
+      <section class="px-3">
+        <h2
+          class="mb-8 text-lg lg:text-2xl font-bold text-gray-900 dark:text-white"
+        >
+          Related Articles
+        </h2>
+        <div
+          class="flex gap-6 flex-col md:flex-row items-center lg:items-stretch"
+        >
+          <article class="max-w-xs p-4 rounded-md shadow-lg bg-gray-50">
+            <a href="var-let-const.html">
+              <img
+                src="assets/var-vs-let-vs-const.png"
+                class="mb-5 rounded-lg w-full max-h-[135px]"
+                alt="var-let-const"
+              />
+            </a>
+            <h2
+              class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white"
+            >
+              <a href="var-let-const.html"
+                >The scope of <code>var</code>, <code>let</code>, and
+                <code>const</code></a
+              >
+            </h2>
+            <p class="mb-4 font-light text-gray-500 dark:text-gray-400">
+              In JavaScript, <code class="bg-yellow-200">var</code>,<code
+                class="bg-yellow-200"
+                >let</code
+              >
+              and <code class="bg-yellow-200">const</code> keywords are used to
+              declare variable. They have different types of scope and
+              behaviors.
+            </p>
+            <a
+              href="var-let-const.html"
+              class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+            >
+              Read in 10 minutes
+            </a>
+          </article>
+          <article class="max-w-xs p-4 rounded-md shadow-lg bg-gray-50">
+            <a href="null-undefined.html">
+              <img
+                src="assets/null-and-undefined.webp"
+                class="mb-5 rounded-lg object-center w-full max-h-[135px]"
+                alt="null-undefined"
+              />
+            </a>
+            <h2
+              class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white"
+            >
+              <a href="null-undefined.html"
+                >The use cases of <code>null</code> and
+                <code>undefined</code></a
+              >
+            </h2>
+            <p class="mb-4 font-light text-gray-500 dark:text-gray-400">
+              Undefined means the variable has been declared, but its value has
+              not been initialize. Null means an empty value.
+            </p>
+            <a
+              href="null-undefined.html"
+              class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+            >
+              Read in 8 minutes
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Hub</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto">
+      <!-- navbar -->
+      <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a onclick="homeBtn()" href="#" class="flex items-center">
+            <img src="assets/Logo.png" class="h-8 mr-3" alt="Flowbite Logo" />
+          </a>
+          <div class="flex md:order-2">
+            <button
+              onclick="blogBtn()"
+              type="button"
+              class="text-white bg-[#FF1F3D] hover:bg-[#FF1F3D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FF1F3D] dark:hover:bg-[#FF1F3D] dark:focus:bg-[#FF1F3D]"
+            >
+              Blog
+            </button>
+          </div>
+          <div
+            class="items-center justify-between w-full md:flex md:w-auto md:order-1"
+            id="navbar-cta"
+          >
+            <ul
+              class="flex flex-col text-[#252525] font-medium mt-3 md:mt-0 px-4 py-2 border rounded-lg bg-[rgba(37,37,37,0.20)] hover:bg-[#FF1F3D] hover:text-white"
+            >
+              <li onclick="homeBtn()">
+                <a href="#" class="block rounded">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr class="border-b-[2px]" />
+
+    <!-- Main Section -->
+    <main class="max-w-7xl mx-auto mt-10 px-3 lg:px-0">
+      <section>
+        <div>
+          <header class="mb-4 lg:mb-6 not-format">
+            <address class="flex items-center mb-6 not-italic">
+              <div
+                class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"
+              >
+                <img
+                  class="mr-4 w-16 h-16 border-2 border-[#ddd] rounded-full"
+                  src="assets/user.webp"
+                  alt="Golam Maula"
+                />
+                <div>
+                  <a
+                    href="#"
+                    rel="author"
+                    class="text-xl font-bold text-gray-900 dark:text-white"
+                    >Golam Muala</a
+                  >
+                  <p
+                    class="text-base font-light text-gray-500 dark:text-gray-400"
+                  >
+                    Novice Web Developer
+                  </p>
+                  <p
+                    class="text-base font-light text-gray-500 dark:text-gray-400"
+                  >
+                    <time
+                      pubdate
+                      datetime="2022-02-08"
+                      title="February 8th, 2022"
+                      >Aug. 1, 2023</time
+                    >
+                  </p>
+                </div>
+              </div>
+            </address>
+            <h1
+              class="mb-4 text-2xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white"
+            >
+              The use cases of <code class="bg-yellow-200">null</code> and
+              <code class="bg-yellow-200">undefined</code>
+            </h1>
+          </header>
+          <section align="justify">
+            <!-- undefined and null use cases -->
+            <p class="text-base lg:text-lg">
+              <code class="bg-yellow-200 font-bold">Undefined</code> means the
+              variable has been declared, but its value has not been initialize
+              and <code class="bg-yellow-200 font-bold">null</code> means an
+              empty value. We can use null and undefined for different purposes
+              and various situations.
+            </p>
+            <p class="text-base lg:text-lg mb-4">
+              Let's see some use cases of
+              <code class="bg-yellow-200 font-bold">undefined</code> and
+              <code class="bg-yellow-200 font-bold">null</code>.
+            </p>
+            <p class="text-base lg:text-lg mt-4">
+              <span class="font-bold"
+                >Use Cases for
+                <code class="bg-yellow-200 font-bold">undefined</code></span
+              >
+              <br />
+            </p>
+            <p class="text-base lg:text-lg">
+              <span class="font-bold">Default Value</span>
+              <br />
+              Set default value in a function parameter, this can be useful for
+              setting default values in function parameters or when you want to
+              check if a variable has been assigned a value yet.
+              <br />
+              Example:
+              <br />
+              <script
+                src="https://ideone.com/e.js/ZyHP60"
+                type="text/javascript"
+              ></script>
+              <br />
+            </p>
+            <p class="text-base lg:text-lg">
+              <span class="font-bold">Array Elements</span>
+              <br />
+              When you access an array element that doesn't exist, it returns
+              undefined. This can be used to check if an element exists in an
+              array.
+              <br />
+              Example:
+              <br />
+              <script
+                src="https://ideone.com/e.js/cJFR6I"
+                type="text/javascript"
+              ></script>
+              <br />
+            </p>
+            <p class="text-base lg:text-lg">
+              <span class="font-bold">Function Return Values</span>
+              <br />
+              Functions that do not explicitly return a value will return
+              <code>undefined</code>. This can be useful for checking if a
+              function has a return value.
+              <br />
+              Example:
+              <br />
+              <script
+                src="https://ideone.com/e.js/ZwNCqy"
+                type="text/javascript"
+              ></script>
+              <br />
+            </p>
+            <p class="text-base lg:text-lg mt-4">
+              <span class="font-bold"
+                >Use Cases for
+                <code class="bg-yellow-200 font-bold">null</code></span
+              >
+              <br />
+            </p>
+            <p class="text-base lg:text-lg">
+              <span class="font-bold">Intentional Absence of Value</span>
+              <br />
+              <code class="bg-yellow-200 font-bold">null</code> is often used to
+              explicitly indicate that a variable or object property should have
+              no value or is intentionally empty.
+              <br />
+              Example:
+              <br />
+              <script
+                src="https://ideone.com/e.js/mft3YG"
+                type="text/javascript"
+              ></script>
+              <br />
+            </p>
+            <p class="text-base lg:text-lg">
+              <span class="font-bold">Comparison for Explicit Emptiness</span>
+              <br />
+              You can use <code class="bg-yellow-200 font-bold">null</code> to
+              explicitly check if something is empty or uninitialized,
+              especially when you need to differentiate it from other falsy
+              values like
+              <code class="bg-yellow-200 font-bold">undefined</code>, 0, or
+              false
+              <br />
+              Example:
+              <br />
+              <script
+                src="https://ideone.com/e.js/0frHPI"
+                type="text/javascript"
+              ></script>
+              <br />
+            </p>
+            <br />
+          </section>
+        </div>
+      </section>
+      <!-- Related Articles -->
+      <section>
+        <section class="px-3">
+          <h2
+            class="mb-8 text-lg lg:text-2xl font-bold text-gray-900 dark:text-white"
+          >
+            Related Articles
+          </h2>
+          <div
+            class="flex gap-6 flex-col md:flex-row items-center lg:items-stretch"
+          >
+            <article class="max-w-xs p-4 rounded-md shadow-lg bg-gray-50">
+              <a href="var-let-const.html">
+                <img
+                  src="assets/var-vs-let-vs-const.png"
+                  class="mb-5 rounded-lg w-full max-h-[135px]"
+                  alt="var-let-const"
+                />
+              </a>
+              <h2
+                class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white"
+              >
+                <a href="var-let-const.html"
+                  >The scope of <code>var</code>, <code>let</code>, and
+                  <code>const</code></a
+                >
+              </h2>
+              <p class="mb-4 font-light text-gray-500 dark:text-gray-400">
+                In JavaScript, <code class="bg-yellow-200">var</code>,<code
+                  class="bg-yellow-200"
+                  >let</code
+                >
+                and <code class="bg-yellow-200">const</code> keywords are used
+                to declare variable. They have different types of scope and
+                behaviors.
+              </p>
+              <a
+                href="var-let-const.html"
+                class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+              >
+                Read in 10 minutes
+              </a>
+            </article>
+            <article class="max-w-xs p-4 rounded-md shadow-lg bg-gray-50">
+              <a href="rest-api.html">
+                <img
+                  src="assets/rest-api.png"
+                  class="mb-5 rounded-lg w-full max-h-[135px]"
+                  alt="rest-api"
+                />
+              </a>
+              <h2
+                class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white"
+              >
+                <a href="rest-api.html">What is REST API?</a>
+              </h2>
+              <p class="mb-4 font-light text-gray-500 dark:text-gray-400">
+                <code class="bg-yellow-200 font-bold">REST API</code> stands for
+                REpresentational State Transfer Application Programming
+                Interface. A REST API also known as RESTful API.
+              </p>
+              <a
+                href="rest-api.html"
+                class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+              >
+                Read in 6 minutes
+              </a>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>
